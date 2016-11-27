@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  sqlserver:
+    image: microsoft/mssql-server-linux
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: P@55w0rd
+    ports:
+      - "1433:1433"
+    volumes:
+      - /var/tmp/docker-sqlserver/opt:/var/opt/mssql
